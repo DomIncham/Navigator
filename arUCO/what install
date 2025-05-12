@@ -1,0 +1,4 @@
+sudo apt install python3-pip
+pip3 install opencv-python
+sudo apt install qtwayland5
+pip install opencv-contrib-python

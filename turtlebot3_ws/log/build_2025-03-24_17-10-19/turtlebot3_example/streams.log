@@ -1,0 +1,28 @@
+[1.036s] Invoking command in '/workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_example': PYTHONPATH=/workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_example/build --no-deps symlink_data
+[1.364s] running develop
+[1.472s] running egg_info
+[1.472s] creating turtlebot3_example.egg-info
+[1.473s] writing turtlebot3_example.egg-info/PKG-INFO
+[1.473s] writing dependency_links to turtlebot3_example.egg-info/dependency_links.txt
+[1.473s] writing entry points to turtlebot3_example.egg-info/entry_points.txt
+[1.473s] writing requirements to turtlebot3_example.egg-info/requires.txt
+[1.474s] writing top-level names to turtlebot3_example.egg-info/top_level.txt
+[1.474s] writing manifest file 'turtlebot3_example.egg-info/SOURCES.txt'
+[1.477s] reading manifest file 'turtlebot3_example.egg-info/SOURCES.txt'
+[1.477s] writing manifest file 'turtlebot3_example.egg-info/SOURCES.txt'
+[1.479s] running build_ext
+[1.480s] Creating /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3-example.egg-link (link to .)
+[1.481s] Installing turtlebot3_interactive_marker script to /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[1.481s] Installing turtlebot3_obstacle_detection script to /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[1.481s] Installing turtlebot3_patrol_client script to /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[1.481s] Installing turtlebot3_patrol_server script to /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[1.481s] Installing turtlebot3_position_control_pointop_key script to /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[1.482s] 
+[1.482s] Installed /workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_example
+[1.482s] running symlink_data
+[1.482s] creating /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example/share/ament_index
+[1.482s] creating /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example/share/ament_index/resource_index
+[1.482s] creating /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example/share/ament_index/resource_index/packages
+[1.482s] symbolically linking /workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_example/resource/turtlebot3_example -> /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example/share/ament_index/resource_index/packages
+[1.482s] symbolically linking /workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_example/package.xml -> /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example/share/turtlebot3_example
+[1.577s] Invoked command in '/workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_example' returned '0': PYTHONPATH=/workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_example/build --no-deps symlink_data

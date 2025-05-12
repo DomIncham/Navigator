@@ -1,0 +1,431 @@
+[0.000000] (-) TimerEvent: {}
+[0.000930] (aruco_detector) JobQueued: {'identifier': 'aruco_detector', 'dependencies': OrderedDict()}
+[0.001073] (my_robot_localization) JobQueued: {'identifier': 'my_robot_localization', 'dependencies': OrderedDict()}
+[0.001124] (aruco_detector) JobStarted: {'identifier': 'aruco_detector'}
+[0.095384] (-) TimerEvent: {}
+[0.195805] (-) TimerEvent: {}
+[0.296217] (-) TimerEvent: {}
+[0.396648] (-) TimerEvent: {}
+[0.497097] (-) TimerEvent: {}
+[0.597525] (-) TimerEvent: {}
+[0.697902] (-) TimerEvent: {}
+[0.798365] (-) TimerEvent: {}
+[0.898795] (-) TimerEvent: {}
+[0.999223] (-) TimerEvent: {}
+[1.099661] (-) TimerEvent: {}
+[1.200106] (-) TimerEvent: {}
+[1.300571] (-) TimerEvent: {}
+[1.401020] (-) TimerEvent: {}
+[1.501484] (-) TimerEvent: {}
+[1.601940] (-) TimerEvent: {}
+[1.702398] (-) TimerEvent: {}
+[1.802820] (-) TimerEvent: {}
+[1.903300] (-) TimerEvent: {}
+[2.003782] (-) TimerEvent: {}
+[2.104352] (-) TimerEvent: {}
+[2.204785] (-) TimerEvent: {}
+[2.305233] (-) TimerEvent: {}
+[2.405680] (-) TimerEvent: {}
+[2.506139] (-) TimerEvent: {}
+[2.762855] (-) TimerEvent: {}
+[2.863357] (-) TimerEvent: {}
+[2.963803] (-) TimerEvent: {}
+[3.064265] (-) TimerEvent: {}
+[3.164714] (-) TimerEvent: {}
+[3.265170] (-) TimerEvent: {}
+[3.365621] (-) TimerEvent: {}
+[3.466093] (-) TimerEvent: {}
+[3.566559] (-) TimerEvent: {}
+[3.666996] (-) TimerEvent: {}
+[3.767453] (-) TimerEvent: {}
+[3.867887] (-) TimerEvent: {}
+[3.968342] (-) TimerEvent: {}
+[4.068787] (-) TimerEvent: {}
+[4.169221] (-) TimerEvent: {}
+[4.269657] (-) TimerEvent: {}
+[4.370088] (-) TimerEvent: {}
+[4.470552] (-) TimerEvent: {}
+[4.571013] (-) TimerEvent: {}
+[4.671477] (-) TimerEvent: {}
+[4.771922] (-) TimerEvent: {}
+[4.872380] (-) TimerEvent: {}
+[4.972821] (-) TimerEvent: {}
+[5.073270] (-) TimerEvent: {}
+[5.173733] (-) TimerEvent: {}
+[5.274183] (-) TimerEvent: {}
+[5.374618] (-) TimerEvent: {}
+[5.475046] (-) TimerEvent: {}
+[5.575500] (-) TimerEvent: {}
+[5.675923] (-) TimerEvent: {}
+[5.776367] (-) TimerEvent: {}
+[5.876810] (-) TimerEvent: {}
+[5.920261] (my_robot_localization) JobStarted: {'identifier': 'my_robot_localization'}
+[5.976947] (-) TimerEvent: {}
+[6.077389] (-) TimerEvent: {}
+[6.177796] (-) TimerEvent: {}
+[6.278193] (-) TimerEvent: {}
+[6.378578] (-) TimerEvent: {}
+[6.479015] (-) TimerEvent: {}
+[6.579482] (-) TimerEvent: {}
+[6.679951] (-) TimerEvent: {}
+[6.780421] (-) TimerEvent: {}
+[6.880876] (-) TimerEvent: {}
+[6.981359] (-) TimerEvent: {}
+[7.081838] (-) TimerEvent: {}
+[7.182321] (-) TimerEvent: {}
+[7.282768] (-) TimerEvent: {}
+[7.383215] (-) TimerEvent: {}
+[7.483665] (-) TimerEvent: {}
+[7.584100] (-) TimerEvent: {}
+[7.684608] (-) TimerEvent: {}
+[7.785071] (-) TimerEvent: {}
+[7.885549] (-) TimerEvent: {}
+[7.985998] (-) TimerEvent: {}
+[8.086495] (-) TimerEvent: {}
+[8.186951] (-) TimerEvent: {}
+[8.287418] (-) TimerEvent: {}
+[8.387861] (-) TimerEvent: {}
+[8.488341] (-) TimerEvent: {}
+[8.588747] (-) TimerEvent: {}
+[8.689194] (-) TimerEvent: {}
+[8.783341] (my_robot_localization) JobProgress: {'identifier': 'my_robot_localization', 'progress': 'cmake'}
+[8.789281] (-) TimerEvent: {}
+[8.889627] (-) TimerEvent: {}
+[8.990080] (-) TimerEvent: {}
+[9.090560] (-) TimerEvent: {}
+[9.191018] (-) TimerEvent: {}
+[9.291534] (-) TimerEvent: {}
+[9.391989] (-) TimerEvent: {}
+[9.492469] (-) TimerEvent: {}
+[9.592915] (-) TimerEvent: {}
+[9.693391] (-) TimerEvent: {}
+[9.793840] (-) TimerEvent: {}
+[9.894337] (-) TimerEvent: {}
+[9.994800] (-) TimerEvent: {}
+[10.095260] (-) TimerEvent: {}
+[10.195734] (-) TimerEvent: {}
+[10.296167] (-) TimerEvent: {}
+[10.396611] (-) TimerEvent: {}
+[10.497066] (-) TimerEvent: {}
+[10.597508] (-) TimerEvent: {}
+[10.697953] (-) TimerEvent: {}
+[10.798474] (-) TimerEvent: {}
+[10.898945] (-) TimerEvent: {}
+[10.999424] (-) TimerEvent: {}
+[11.099871] (-) TimerEvent: {}
+[11.200343] (-) TimerEvent: {}
+[11.300770] (-) TimerEvent: {}
+[11.401219] (-) TimerEvent: {}
+[11.501666] (-) TimerEvent: {}
+[11.602116] (-) TimerEvent: {}
+[11.702557] (-) TimerEvent: {}
+[11.803011] (-) TimerEvent: {}
+[11.903480] (-) TimerEvent: {}
+[12.003944] (-) TimerEvent: {}
+[12.104429] (-) TimerEvent: {}
+[12.204896] (-) TimerEvent: {}
+[12.305382] (-) TimerEvent: {}
+[12.405849] (-) TimerEvent: {}
+[12.506370] (-) TimerEvent: {}
+[12.607247] (-) TimerEvent: {}
+[12.707837] (-) TimerEvent: {}
+[12.808322] (-) TimerEvent: {}
+[12.908779] (-) TimerEvent: {}
+[13.009244] (-) TimerEvent: {}
+[13.109698] (-) TimerEvent: {}
+[13.210164] (-) TimerEvent: {}
+[13.310613] (-) TimerEvent: {}
+[13.411071] (-) TimerEvent: {}
+[13.511551] (-) TimerEvent: {}
+[13.611998] (-) TimerEvent: {}
+[13.712475] (-) TimerEvent: {}
+[13.812933] (-) TimerEvent: {}
+[13.913419] (-) TimerEvent: {}
+[14.080579] (-) TimerEvent: {}
+[14.181029] (-) TimerEvent: {}
+[14.281499] (-) TimerEvent: {}
+[14.381979] (-) TimerEvent: {}
+[14.482454] (-) TimerEvent: {}
+[14.582898] (-) TimerEvent: {}
+[14.683372] (-) TimerEvent: {}
+[14.783820] (-) TimerEvent: {}
+[14.884290] (-) TimerEvent: {}
+[14.984751] (-) TimerEvent: {}
+[15.085230] (-) TimerEvent: {}
+[15.185705] (-) TimerEvent: {}
+[15.286175] (-) TimerEvent: {}
+[15.386620] (-) TimerEvent: {}
+[15.487069] (-) TimerEvent: {}
+[15.587539] (-) TimerEvent: {}
+[15.688008] (-) TimerEvent: {}
+[15.788482] (-) TimerEvent: {}
+[15.888940] (-) TimerEvent: {}
+[15.989440] (-) TimerEvent: {}
+[16.089885] (-) TimerEvent: {}
+[16.190435] (-) TimerEvent: {}
+[16.290967] (-) TimerEvent: {}
+[16.391460] (-) TimerEvent: {}
+[16.491951] (-) TimerEvent: {}
+[16.592442] (-) TimerEvent: {}
+[16.692886] (-) TimerEvent: {}
+[16.793372] (-) TimerEvent: {}
+[16.893802] (-) TimerEvent: {}
+[16.994326] (-) TimerEvent: {}
+[17.094793] (-) TimerEvent: {}
+[17.195241] (-) TimerEvent: {}
+[17.295653] (-) TimerEvent: {}
+[17.396073] (-) TimerEvent: {}
+[17.496539] (-) TimerEvent: {}
+[17.597007] (-) TimerEvent: {}
+[17.697479] (-) TimerEvent: {}
+[17.797940] (-) TimerEvent: {}
+[17.898428] (-) TimerEvent: {}
+[17.990615] (my_robot_localization) JobProgress: {'identifier': 'my_robot_localization', 'progress': 'build'}
+[17.992230] (my_robot_localization) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspaces/ros2-workspace/turtlebot3_ws/build/my_robot_localization', '--', '-j4', '-l4'], 'cwd': '/workspaces/ros2-workspace/turtlebot3_ws/build/my_robot_localization', 'env': OrderedDict([('HOSTNAME', 'raspberrypi'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-arm64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-arm64/17baf841131aa23349f217ca7c570c76ee87b957/bin/helpers/browser.sh'), ('HOME', '/home/rosdev'), ('OLDPWD', '/workspaces/ros2-workspace'), ('TERM_PROGRAM_VERSION', '1.99.3'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-6e7c6b79-bbba-42b0-a894-3aa882888da9.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-arm64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-arm64/17baf841131aa23349f217ca7c570c76ee87b957/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/ros2-workspace/turtlebot3_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-4d81b477-8052-4e9a-a235-9c3c589ab787.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/vscode/vscode-server/bin/linux-arm64/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-4d81b477-8052-4e9a-a235-9c3c589ab787.sock","/home/rosdev/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-130ad095b8.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-4d81b477-8052-4e9a-a235-9c3c589ab787.sock'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_bringup:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_description:/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization:/workspaces/ros2-workspace/turtlebot3_ws/install/ld08_driver:/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/ros2-workspace/turtlebot3_ws/build/my_robot_localization'), ('OPENCR_PORT', '/dev/ttyACM0'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'C.UTF-8'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_bringup:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_description:/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization:/workspaces/ros2-workspace/turtlebot3_ws/install/ld08_driver:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example:/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector:/opt/ros/humble'), ('OPENCR_MODEL', 'burger')]), 'shell': False}
+[17.999188] (-) TimerEvent: {}
+[18.100599] (-) TimerEvent: {}
+[18.201068] (-) TimerEvent: {}
+[18.301544] (-) TimerEvent: {}
+[18.402110] (-) TimerEvent: {}
+[18.502586] (-) TimerEvent: {}
+[18.602982] (-) TimerEvent: {}
+[18.703385] (-) TimerEvent: {}
+[18.803789] (-) TimerEvent: {}
+[18.904257] (-) TimerEvent: {}
+[19.004791] (-) TimerEvent: {}
+[19.105279] (-) TimerEvent: {}
+[19.512500] (-) TimerEvent: {}
+[19.612983] (-) TimerEvent: {}
+[19.713447] (-) TimerEvent: {}
+[19.813904] (-) TimerEvent: {}
+[19.914397] (-) TimerEvent: {}
+[20.014857] (-) TimerEvent: {}
+[20.115347] (-) TimerEvent: {}
+[20.215829] (-) TimerEvent: {}
+[20.316304] (-) TimerEvent: {}
+[20.416753] (-) TimerEvent: {}
+[20.517216] (-) TimerEvent: {}
+[20.617682] (-) TimerEvent: {}
+[20.718170] (-) TimerEvent: {}
+[20.818545] (-) TimerEvent: {}
+[20.919038] (-) TimerEvent: {}
+[21.019515] (-) TimerEvent: {}
+[21.120156] (-) TimerEvent: {}
+[21.220616] (-) TimerEvent: {}
+[21.321061] (-) TimerEvent: {}
+[21.421556] (-) TimerEvent: {}
+[21.522031] (-) TimerEvent: {}
+[21.622496] (-) TimerEvent: {}
+[21.722937] (-) TimerEvent: {}
+[21.823420] (-) TimerEvent: {}
+[21.923895] (-) TimerEvent: {}
+[22.024379] (-) TimerEvent: {}
+[22.124839] (-) TimerEvent: {}
+[22.225298] (-) TimerEvent: {}
+[22.325741] (-) TimerEvent: {}
+[22.426199] (-) TimerEvent: {}
+[22.526648] (-) TimerEvent: {}
+[22.627112] (-) TimerEvent: {}
+[22.727617] (-) TimerEvent: {}
+[22.828113] (-) TimerEvent: {}
+[22.928587] (-) TimerEvent: {}
+[23.029136] (-) TimerEvent: {}
+[23.129561] (-) TimerEvent: {}
+[23.230015] (-) TimerEvent: {}
+[23.330456] (-) TimerEvent: {}
+[23.430893] (-) TimerEvent: {}
+[23.531337] (-) TimerEvent: {}
+[23.631773] (-) TimerEvent: {}
+[23.732219] (-) TimerEvent: {}
+[23.832679] (-) TimerEvent: {}
+[23.933192] (-) TimerEvent: {}
+[24.033899] (-) TimerEvent: {}
+[24.134420] (-) TimerEvent: {}
+[29.963192] (-) TimerEvent: {}
+[30.063747] (-) TimerEvent: {}
+[30.164213] (-) TimerEvent: {}
+[30.264682] (-) TimerEvent: {}
+[30.365195] (-) TimerEvent: {}
+[30.465657] (-) TimerEvent: {}
+[30.566101] (-) TimerEvent: {}
+[30.666600] (-) TimerEvent: {}
+[30.767071] (-) TimerEvent: {}
+[30.867548] (-) TimerEvent: {}
+[30.967980] (-) TimerEvent: {}
+[31.068456] (-) TimerEvent: {}
+[31.168901] (-) TimerEvent: {}
+[31.269380] (-) TimerEvent: {}
+[31.369835] (-) TimerEvent: {}
+[31.470317] (-) TimerEvent: {}
+[31.570775] (-) TimerEvent: {}
+[31.671274] (-) TimerEvent: {}
+[31.771729] (-) TimerEvent: {}
+[31.872202] (-) TimerEvent: {}
+[31.972659] (-) TimerEvent: {}
+[32.073114] (-) TimerEvent: {}
+[32.173591] (-) TimerEvent: {}
+[32.274092] (-) TimerEvent: {}
+[32.374574] (-) TimerEvent: {}
+[32.475039] (-) TimerEvent: {}
+[32.575496] (-) TimerEvent: {}
+[32.675945] (-) TimerEvent: {}
+[32.776433] (-) TimerEvent: {}
+[32.876903] (-) TimerEvent: {}
+[32.977376] (-) TimerEvent: {}
+[33.077843] (-) TimerEvent: {}
+[33.178348] (-) TimerEvent: {}
+[33.278819] (-) TimerEvent: {}
+[33.379340] (-) TimerEvent: {}
+[33.479823] (-) TimerEvent: {}
+[33.580301] (-) TimerEvent: {}
+[33.680760] (-) TimerEvent: {}
+[33.781252] (-) TimerEvent: {}
+[33.881727] (-) TimerEvent: {}
+[33.982205] (-) TimerEvent: {}
+[34.082668] (-) TimerEvent: {}
+[34.183145] (-) TimerEvent: {}
+[34.283608] (-) TimerEvent: {}
+[34.384079] (-) TimerEvent: {}
+[34.484580] (-) TimerEvent: {}
+[34.585062] (-) TimerEvent: {}
+[34.685532] (-) TimerEvent: {}
+[34.786011] (-) TimerEvent: {}
+[34.886485] (-) TimerEvent: {}
+[34.986923] (-) TimerEvent: {}
+[35.087428] (-) TimerEvent: {}
+[35.188025] (-) TimerEvent: {}
+[35.288523] (-) TimerEvent: {}
+[35.388976] (-) TimerEvent: {}
+[35.489442] (-) TimerEvent: {}
+[35.589902] (-) TimerEvent: {}
+[35.690386] (-) TimerEvent: {}
+[35.790865] (-) TimerEvent: {}
+[35.891343] (-) TimerEvent: {}
+[35.991798] (-) TimerEvent: {}
+[36.092256] (-) TimerEvent: {}
+[36.192766] (-) TimerEvent: {}
+[36.293251] (-) TimerEvent: {}
+[36.393687] (-) TimerEvent: {}
+[36.494115] (-) TimerEvent: {}
+[36.594589] (-) TimerEvent: {}
+[36.695043] (-) TimerEvent: {}
+[36.795520] (-) TimerEvent: {}
+[36.895975] (-) TimerEvent: {}
+[36.996442] (-) TimerEvent: {}
+[37.096909] (-) TimerEvent: {}
+[37.197365] (-) TimerEvent: {}
+[37.297840] (-) TimerEvent: {}
+[37.398323] (-) TimerEvent: {}
+[37.498781] (-) TimerEvent: {}
+[37.599230] (-) TimerEvent: {}
+[37.699686] (-) TimerEvent: {}
+[37.800150] (-) TimerEvent: {}
+[37.900596] (-) TimerEvent: {}
+[38.001032] (-) TimerEvent: {}
+[38.101448] (-) TimerEvent: {}
+[38.201884] (-) TimerEvent: {}
+[38.302364] (-) TimerEvent: {}
+[38.402803] (-) TimerEvent: {}
+[38.503266] (-) TimerEvent: {}
+[38.603736] (-) TimerEvent: {}
+[38.704200] (-) TimerEvent: {}
+[38.804646] (-) TimerEvent: {}
+[38.905072] (-) TimerEvent: {}
+[39.005524] (-) TimerEvent: {}
+[39.105967] (-) TimerEvent: {}
+[39.206458] (-) TimerEvent: {}
+[39.306914] (-) TimerEvent: {}
+[39.407403] (-) TimerEvent: {}
+[39.446700] (my_robot_localization) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[39.507534] (-) TimerEvent: {}
+[39.607972] (-) TimerEvent: {}
+[39.708397] (-) TimerEvent: {}
+[39.808840] (-) TimerEvent: {}
+[39.909339] (-) TimerEvent: {}
+[40.009798] (-) TimerEvent: {}
+[40.110246] (-) TimerEvent: {}
+[40.210693] (-) TimerEvent: {}
+[40.461710] (-) TimerEvent: {}
+[40.562194] (-) TimerEvent: {}
+[40.662649] (-) TimerEvent: {}
+[40.760903] (aruco_detector) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/aruco_detector', 'build', '--build-base', '/workspaces/ros2-workspace/turtlebot3_ws/build/aruco_detector/build', 'install', '--record', '/workspaces/ros2-workspace/turtlebot3_ws/build/aruco_detector/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/workspaces/ros2-workspace/turtlebot3_ws/src/aruco_detector', 'env': {'HOSTNAME': 'raspberrypi', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-arm64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-arm64/17baf841131aa23349f217ca7c570c76ee87b957/bin/helpers/browser.sh', 'HOME': '/home/rosdev', 'OLDPWD': '/workspaces/ros2-workspace', 'TERM_PROGRAM_VERSION': '1.99.3', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-6e7c6b79-bbba-42b0-a894-3aa882888da9.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-arm64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-arm64/17baf841131aa23349f217ca7c570c76ee87b957/node', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/workspaces/ros2-workspace/turtlebot3_ws/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-4d81b477-8052-4e9a-a235-9c3c589ab787.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/vscode/vscode-server/bin/linux-arm64/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-4d81b477-8052-4e9a-a235-9c3c589ab787.sock","/home/rosdev/.gnupg/S.gpg-agent"]', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-130ad095b8.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-4d81b477-8052-4e9a-a235-9c3c589ab787.sock', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_bringup:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_description:/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization:/workspaces/ros2-workspace/turtlebot3_ws/install/ld08_driver:/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector:/opt/ros/humble', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspaces/ros2-workspace/turtlebot3_ws/build/aruco_detector', 'OPENCR_PORT': '/dev/ttyACM0', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'C.UTF-8', 'LDS_MODEL': 'LDS-01', 'PYTHONPATH': '/workspaces/ros2-workspace/turtlebot3_ws/build/aruco_detector/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector/lib/python3.10/site-packages:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_bringup:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_description:/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization:/workspaces/ros2-workspace/turtlebot3_ws/install/ld08_driver', 'OPENCR_MODEL': 'burger'}, 'shell': False}
+[43.649983] (-) TimerEvent: {}
+[43.650340] (aruco_detector) StdoutLine: {'line': b'running egg_info\n'}
+[43.650653] (aruco_detector) StdoutLine: {'line': b'writing ../../build/aruco_detector/aruco_detector.egg-info/PKG-INFO\n'}
+[43.651804] (aruco_detector) StdoutLine: {'line': b'writing dependency_links to ../../build/aruco_detector/aruco_detector.egg-info/dependency_links.txt\n'}
+[43.651995] (aruco_detector) StdoutLine: {'line': b'writing entry points to ../../build/aruco_detector/aruco_detector.egg-info/entry_points.txt\n'}
+[43.652125] (aruco_detector) StdoutLine: {'line': b'writing requirements to ../../build/aruco_detector/aruco_detector.egg-info/requires.txt\n'}
+[43.652296] (aruco_detector) StdoutLine: {'line': b'writing top-level names to ../../build/aruco_detector/aruco_detector.egg-info/top_level.txt\n'}
+[43.663247] (aruco_detector) StdoutLine: {'line': b"reading manifest file '../../build/aruco_detector/aruco_detector.egg-info/SOURCES.txt'\n"}
+[43.750095] (-) TimerEvent: {}
+[43.850470] (-) TimerEvent: {}
+[43.950967] (-) TimerEvent: {}
+[44.051439] (-) TimerEvent: {}
+[44.151920] (-) TimerEvent: {}
+[44.252425] (-) TimerEvent: {}
+[44.352887] (-) TimerEvent: {}
+[44.453369] (-) TimerEvent: {}
+[44.553825] (-) TimerEvent: {}
+[44.651299] (aruco_detector) StdoutLine: {'line': b"writing manifest file '../../build/aruco_detector/aruco_detector.egg-info/SOURCES.txt'\n"}
+[44.653957] (-) TimerEvent: {}
+[44.754473] (-) TimerEvent: {}
+[44.786041] (aruco_detector) StdoutLine: {'line': b'running build\n'}
+[44.786400] (aruco_detector) StdoutLine: {'line': b'running build_py\n'}
+[44.786841] (aruco_detector) StdoutLine: {'line': b'running install\n'}
+[44.787583] (aruco_detector) StdoutLine: {'line': b'running install_lib\n'}
+[44.790391] (aruco_detector) StdoutLine: {'line': b'running install_data\n'}
+[44.790763] (aruco_detector) StdoutLine: {'line': b'running install_egg_info\n'}
+[44.794427] (aruco_detector) StdoutLine: {'line': b"removing '/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector/lib/python3.10/site-packages/aruco_detector-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[44.795042] (aruco_detector) StdoutLine: {'line': b'Copying ../../build/aruco_detector/aruco_detector.egg-info to /workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector/lib/python3.10/site-packages/aruco_detector-0.0.0-py3.10.egg-info\n'}
+[44.854587] (-) TimerEvent: {}
+[44.955024] (-) TimerEvent: {}
+[45.055471] (-) TimerEvent: {}
+[45.155939] (-) TimerEvent: {}
+[45.256427] (-) TimerEvent: {}
+[45.356875] (-) TimerEvent: {}
+[45.457315] (-) TimerEvent: {}
+[45.557801] (-) TimerEvent: {}
+[47.882728] (aruco_detector) StdoutLine: {'line': b'running install_scripts\n'}
+[47.883149] (-) TimerEvent: {}
+[47.888917] (my_robot_localization) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[47.941624] (aruco_detector) StdoutLine: {'line': b'Installing aruco_node script to /workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector/lib/aruco_detector\n'}
+[47.943711] (aruco_detector) StdoutLine: {'line': b"writing list of installed files to '/workspaces/ros2-workspace/turtlebot3_ws/build/aruco_detector/install.log'\n"}
+[47.984315] (-) TimerEvent: {}
+[48.071187] (aruco_detector) CommandEnded: {'returncode': 0}
+[48.087871] (-) TimerEvent: {}
+[48.117587] (my_robot_localization) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[48.122311] (my_robot_localization) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[48.122673] (aruco_detector) JobEnded: {'identifier': 'aruco_detector', 'rc': 0}
+[48.123431] (my_robot_localization) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[48.123759] (my_robot_localization) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[48.135799] (my_robot_localization) StdoutLine: {'line': b'-- Configuring done\n'}
+[48.185708] (my_robot_localization) StdoutLine: {'line': b'-- Generating done\n'}
+[48.188100] (-) TimerEvent: {}
+[48.206515] (my_robot_localization) StdoutLine: {'line': b'-- Build files have been written to: /workspaces/ros2-workspace/turtlebot3_ws/build/my_robot_localization\n'}
+[48.256822] (my_robot_localization) CommandEnded: {'returncode': 0}
+[48.261774] (my_robot_localization) JobProgress: {'identifier': 'my_robot_localization', 'progress': 'install'}
+[48.280940] (my_robot_localization) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspaces/ros2-workspace/turtlebot3_ws/build/my_robot_localization'], 'cwd': '/workspaces/ros2-workspace/turtlebot3_ws/build/my_robot_localization', 'env': OrderedDict([('HOSTNAME', 'raspberrypi'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-arm64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-arm64/17baf841131aa23349f217ca7c570c76ee87b957/bin/helpers/browser.sh'), ('HOME', '/home/rosdev'), ('OLDPWD', '/workspaces/ros2-workspace'), ('TERM_PROGRAM_VERSION', '1.99.3'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-6e7c6b79-bbba-42b0-a894-3aa882888da9.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-arm64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-arm64/17baf841131aa23349f217ca7c570c76ee87b957/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/ros2-workspace/turtlebot3_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-4d81b477-8052-4e9a-a235-9c3c589ab787.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/vscode/vscode-server/bin/linux-arm64/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-4d81b477-8052-4e9a-a235-9c3c589ab787.sock","/home/rosdev/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-130ad095b8.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-4d81b477-8052-4e9a-a235-9c3c589ab787.sock'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_bringup:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_description:/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization:/workspaces/ros2-workspace/turtlebot3_ws/install/ld08_driver:/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/ros2-workspace/turtlebot3_ws/build/my_robot_localization'), ('OPENCR_PORT', '/dev/ttyACM0'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'C.UTF-8'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_bringup:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_description:/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization:/workspaces/ros2-workspace/turtlebot3_ws/install/ld08_driver:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example:/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector:/opt/ros/humble'), ('OPENCR_MODEL', 'burger')]), 'shell': False}
+[48.288313] (-) TimerEvent: {}
+[48.300004] (my_robot_localization) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[48.300341] (my_robot_localization) StdoutLine: {'line': b'-- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/config\n'}
+[48.300509] (my_robot_localization) StdoutLine: {'line': b'-- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/config/ekf.yaml\n'}
+[48.300626] (my_robot_localization) StdoutLine: {'line': b'-- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/launch\n'}
+[48.301355] (my_robot_localization) StdoutLine: {'line': b'-- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/launch/ekf_localization.launch.py\n'}
+[48.302093] (my_robot_localization) StdoutLine: {'line': b'-- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/ament_index/resource_index/package_run_dependencies/my_robot_localization\n'}
+[48.302278] (my_robot_localization) StdoutLine: {'line': b'-- Installing: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/ament_index/resource_index/parent_prefix_path/my_robot_localization\n'}
+[48.303717] (my_robot_localization) StdoutLine: {'line': b'-- Installing: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/environment/ament_prefix_path.sh\n'}
+[48.303891] (my_robot_localization) StdoutLine: {'line': b'-- Installing: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/environment/ament_prefix_path.dsv\n'}
+[48.304688] (my_robot_localization) StdoutLine: {'line': b'-- Installing: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/environment/path.sh\n'}
+[48.304865] (my_robot_localization) StdoutLine: {'line': b'-- Installing: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/environment/path.dsv\n'}
+[48.307276] (my_robot_localization) StdoutLine: {'line': b'-- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/local_setup.bash\n'}
+[48.307600] (my_robot_localization) StdoutLine: {'line': b'-- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/local_setup.sh\n'}
+[48.307743] (my_robot_localization) StdoutLine: {'line': b'-- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/local_setup.zsh\n'}
+[48.307860] (my_robot_localization) StdoutLine: {'line': b'-- Installing: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/local_setup.dsv\n'}
+[48.308030] (my_robot_localization) StdoutLine: {'line': b'-- Installing: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/package.dsv\n'}
+[48.308216] (my_robot_localization) StdoutLine: {'line': b'-- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/ament_index/resource_index/packages/my_robot_localization\n'}
+[48.308360] (my_robot_localization) StdoutLine: {'line': b'-- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/cmake/my_robot_localizationConfig.cmake\n'}
+[48.308453] (my_robot_localization) StdoutLine: {'line': b'-- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/cmake/my_robot_localizationConfig-version.cmake\n'}
+[48.308563] (my_robot_localization) StdoutLine: {'line': b'-- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/package.xml\n'}
+[48.312172] (my_robot_localization) CommandEnded: {'returncode': 0}
+[48.366913] (my_robot_localization) JobEnded: {'identifier': 'my_robot_localization', 'rc': 0}
+[48.370212] (-) EventReactorShutdown: {}

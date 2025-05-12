@@ -1,0 +1,21 @@
+[43.648s] Invoking command in '/workspaces/ros2-workspace/turtlebot3_ws/src/aruco_detector': PYTHONPATH=/workspaces/ros2-workspace/turtlebot3_ws/build/aruco_detector/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aruco_detector build --build-base /workspaces/ros2-workspace/turtlebot3_ws/build/aruco_detector/build install --record /workspaces/ros2-workspace/turtlebot3_ws/build/aruco_detector/install.log --single-version-externally-managed install_data
+[43.649s] running egg_info
+[43.651s] writing ../../build/aruco_detector/aruco_detector.egg-info/PKG-INFO
+[43.651s] writing dependency_links to ../../build/aruco_detector/aruco_detector.egg-info/dependency_links.txt
+[43.651s] writing entry points to ../../build/aruco_detector/aruco_detector.egg-info/entry_points.txt
+[43.651s] writing requirements to ../../build/aruco_detector/aruco_detector.egg-info/requires.txt
+[43.651s] writing top-level names to ../../build/aruco_detector/aruco_detector.egg-info/top_level.txt
+[43.662s] reading manifest file '../../build/aruco_detector/aruco_detector.egg-info/SOURCES.txt'
+[44.650s] writing manifest file '../../build/aruco_detector/aruco_detector.egg-info/SOURCES.txt'
+[44.785s] running build
+[44.785s] running build_py
+[44.786s] running install
+[44.787s] running install_lib
+[44.789s] running install_data
+[44.790s] running install_egg_info
+[44.793s] removing '/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector/lib/python3.10/site-packages/aruco_detector-0.0.0-py3.10.egg-info' (and everything under it)
+[44.794s] Copying ../../build/aruco_detector/aruco_detector.egg-info to /workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector/lib/python3.10/site-packages/aruco_detector-0.0.0-py3.10.egg-info
+[47.882s] running install_scripts
+[47.941s] Installing aruco_node script to /workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector/lib/aruco_detector
+[47.943s] writing list of installed files to '/workspaces/ros2-workspace/turtlebot3_ws/build/aruco_detector/install.log'
+[48.070s] Invoked command in '/workspaces/ros2-workspace/turtlebot3_ws/src/aruco_detector' returned '0': PYTHONPATH=/workspaces/ros2-workspace/turtlebot3_ws/build/aruco_detector/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aruco_detector build --build-base /workspaces/ros2-workspace/turtlebot3_ws/build/aruco_detector/build install --record /workspaces/ros2-workspace/turtlebot3_ws/build/aruco_detector/install.log --single-version-externally-managed install_data

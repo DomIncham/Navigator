@@ -1,0 +1,3 @@
+[console_scripts]
+aruco_node = aruco_detector.aruco_node:main
+

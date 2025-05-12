@@ -1,0 +1,54 @@
+[0.061s] Invoking command in '/workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake /workspaces/ros2-workspace/turtlebot3_ws/src/turtlebot3/turtlebot3_node -DCMAKE_INSTALL_PREFIX=/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node
+[0.490s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.490s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.537s] -- Found dynamixel_sdk: 3.7.60 (/opt/ros/humble/share/dynamixel_sdk/cmake)
+[0.548s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.685s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.706s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.732s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.773s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.824s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.275s] -- Found message_filters: 4.3.5 (/opt/ros/humble/share/message_filters/cmake)
+[1.543s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.569s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.981s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.145s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[2.211s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.290s] -- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)
+[2.331s] -- Found tf2: 0.25.12 (/opt/ros/humble/share/tf2/cmake)
+[2.344s] -- Found tf2_ros: 0.25.12 (/opt/ros/humble/share/tf2_ros/cmake)
+[2.690s] -- Found turtlebot3_msgs: 2.2.3 (/opt/ros/humble/share/turtlebot3_msgs/cmake)
+[3.003s] -- Configuring done
+[3.107s] -- Generating done
+[3.162s] -- Build files have been written to: /workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_node
+[3.230s] Invoked command in '/workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake /workspaces/ros2-workspace/turtlebot3_ws/src/turtlebot3/turtlebot3_node -DCMAKE_INSTALL_PREFIX=/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node
+[3.231s] Invoking command in '/workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_node -- -j4 -l4
+[3.444s] [35m[1mConsolidate compiler generated dependencies of target turtlebot3_node_lib[0m
+[3.606s] [ 85%] Built target turtlebot3_node_lib
+[3.630s] [35m[1mConsolidate compiler generated dependencies of target turtlebot3_ros[0m
+[3.682s] [100%] Built target turtlebot3_ros
+[3.718s] Invoked command in '/workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_node -- -j4 -l4
+[3.783s] Invoking command in '/workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_node
+[3.796s] -- Install configuration: ""
+[3.797s] -- Execute custom install script
+[3.798s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/param/burger.yaml
+[3.798s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/param/waffle.yaml
+[3.798s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/param/waffle_pi.yaml
+[3.798s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/lib/turtlebot3_node/turtlebot3_ros
+[3.799s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/ament_index/resource_index/package_run_dependencies/turtlebot3_node
+[3.799s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/ament_index/resource_index/parent_prefix_path/turtlebot3_node
+[3.799s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/environment/ament_prefix_path.sh
+[3.799s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/environment/ament_prefix_path.dsv
+[3.800s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/environment/path.sh
+[3.800s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/environment/path.dsv
+[3.800s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.bash
+[3.801s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.sh
+[3.801s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.zsh
+[3.801s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.dsv
+[3.801s] -- Symlinking: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/package.dsv
+[3.817s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/ament_index/resource_index/packages/turtlebot3_node
+[3.818s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.818s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/turtlebot3_nodeConfig.cmake
+[3.818s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/turtlebot3_nodeConfig-version.cmake
+[3.818s] -- Up-to-date symlink: /workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/package.xml
+[3.823s] Invoked command in '/workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /workspaces/ros2-workspace/turtlebot3_ws/build/turtlebot3_node
