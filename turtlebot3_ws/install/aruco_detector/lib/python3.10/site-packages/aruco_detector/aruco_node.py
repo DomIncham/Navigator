@@ -73,7 +73,7 @@ class ArucoNode(Node):
             Point(x=-0.6, y=0.0, z=0.0),
             Point(x=1.0, y=0.0, z=0.0),
             Point(x=1.0, y=-3.0, z=0.0),
-            Point(x=4.5, y=-3.0, z=0.0),  
+            Point(x=3.4, y=-3.0, z=0.0),  
         ]
 
         self.timer_detect = self.create_timer(0.07, self.aruco_detection_loop)
@@ -90,9 +90,9 @@ class ArucoNode(Node):
         self.aruco_detector = cv2.aruco.ArucoDetector(self.aruco_dict, cv2.aruco.DetectorParameters())
 
         self.cap = cv2.VideoCapture(0)
-        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
-        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
-        self.cap.set(cv2.CAP_PROP_FPS, 20)
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 160)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 120)
+        self.cap.set(cv2.CAP_PROP_FPS, 25)
 
         self.alignment_in_progress = False
         self.seeking_id42 = False

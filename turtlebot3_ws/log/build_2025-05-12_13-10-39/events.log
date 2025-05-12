@@ -1,0 +1,11 @@
+[0.000000] (-) TimerEvent: {}
+[0.000571] (-) JobUnselected: {'identifier': 'aruco_detector'}
+[0.000764] (-) JobUnselected: {'identifier': 'ld08_driver'}
+[0.000790] (-) JobUnselected: {'identifier': 'my_robot_localization'}
+[0.000812] (-) JobUnselected: {'identifier': 'turtlebot3'}
+[0.000872] (-) JobUnselected: {'identifier': 'turtlebot3_bringup'}
+[0.000894] (-) JobUnselected: {'identifier': 'turtlebot3_description'}
+[0.000930] (-) JobUnselected: {'identifier': 'turtlebot3_example'}
+[0.000951] (-) JobUnselected: {'identifier': 'turtlebot3_node'}
+[0.000978] (-) JobUnselected: {'identifier': 'turtlebot3_teleop'}
+[0.001200] (-) EventReactorShutdown: {}
