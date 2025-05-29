@@ -244,7 +244,7 @@ class ArucoNode(Node):
             
             case 'ROTATE':
                 MIN_ROTATE_SPEED = 0.9
-                REQUIRED_ALIGNMENT_CYCLES = 5
+                REQUIRED_ALIGNMENT_CYCLES = 20
 
                 if marker_id == 41:
                     self.send_swerve_command("Rotate-Right", 0.0, 0.0, -MIN_ROTATE_SPEED , 1.0)
