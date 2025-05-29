@@ -1,0 +1,67 @@
+{
+    "name": "ROS 2 Workspace humble-ros-base",
+    "remoteUser": "rosdev",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "USERNAME": "rosdev",
+            "GID": "1000",
+            "UID": "1000"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+              "ms-python.python",
+              "charliermarsh.ruff",
+              "ms-vscode.cpptools-extension-pack",
+              "ms-iot.vscode-ros",
+              "smilerobotics.urdf",
+              "redhat.vscode-xml",
+              "tamasfe.even-better-toml",
+              "timonwong.shellcheck",
+              "yzhang.markdown-all-in-one",
+              "george3447.docker-run",
+              "ms-azuretools.vscode-docker"
+            ],
+            "settings": {
+                "files.associations": {
+                    "*.rviz": "yaml",
+                    "*.srdf": "xml",
+                    "*.urdf": "xml",
+                    "*.xacro": "xml"
+                }
+            }
+        }
+    },
+    "workspaceFolder": "/home/rosdev/ros2_ws",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/rosdev/ros2_ws/src,type=bind",
+    "mounts": [
+      "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind",
+      "source=/home/navigator/Desktop/arUCO,target=/workspaces/ros2-workspace/arUCO,type=bind",
+      "source=/home/navigator/Desktop/aruco_detector,target=/workspaces/ros2-workspace/aruco_detector,type=bind",
+      //"source=/dev/video0,target=/dev/video0,type=bind"
+    ],
+    "postCreateCommand": "sudo usermod -aG video rosdev",
+    "runArgs": [
+          "--cap-add=SYS_PTRACE", // Allows the container to trace processes using ptrace system call
+          "--security-opt=seccomp=unconfined", // Disables seccomp security profiles for the container
+          "--ipc=host", // Shares the host's IPC namespace with the container
+          "--network=host", // Shares the host's network namespace with the container
+          "--pid=host", // Shares the host's PID namespace with the container
+          "--device=/dev/input/js0",
+          "--device=/dev/ttyUSB0",
+          "--device=/dev/ttyACM0",
+      "--device=/dev/video0",
+      "--group-add=video",
+          "--privileged"// Gives the container full access to the host's devices and allows it to run with root privileges
+      ],
+    "containerEnv": {
+          /* Uncomment to allow the container to access the X server on the host e.g. to run Rviz and other GUI tools*/
+          "DISPLAY": ":0",
+          "PYTHONPATH": "/opt/ros/humble/lib/python3.10/site-packages",
+          "TZ": "Asia/Bangkok"
+      }
+  
+  }
+  

@@ -1,0 +1,17 @@
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/config/ekf.yaml
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/launch/ekf_localization.launch.py
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/ament_index/resource_index/package_run_dependencies/my_robot_localization
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/ament_index/resource_index/parent_prefix_path/my_robot_localization
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/environment/ament_prefix_path.sh
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/environment/ament_prefix_path.dsv
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/environment/path.sh
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/environment/path.dsv
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/local_setup.bash
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/local_setup.sh
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/local_setup.zsh
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/local_setup.dsv
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/package.dsv
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/ament_index/resource_index/packages/my_robot_localization
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/cmake/my_robot_localizationConfig.cmake
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/cmake/my_robot_localizationConfig-version.cmake
+/workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/package.xml
