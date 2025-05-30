@@ -22,6 +22,8 @@ import tf_transformations
 from ament_index_python.packages import get_package_share_directory
 from cv_bridge import CvBridge
 from math import hypot
+from sensor_msgs.msg import Imu
+from tf_transformations import euler_from_quaternion
 
 
 
@@ -43,6 +45,8 @@ class ArucoNode(Node):
         self.tb3_marker_pub = self.create_publisher(Marker, '/turtlebot3_path_marker', 10)
 
         self.create_subscription(PoseWithCovarianceStamped, '/amcl_pose', self.turtlebot3_pose_callback, 10)
+        self.create_subscription(Imu, '/swerve_drive/imu', self.swerve_imu_callback, 10)
+        self.create_subscription(Imu, '/imu', self.tb3_imu_callback, 10)
 
         self.static_tf_broadcaster = StaticTransformBroadcaster(self)
         self.broadcast_static_camera_tf()
@@ -51,7 +55,7 @@ class ArucoNode(Node):
         self.path_timestamps = []  # สำหรับ timestamp sync ทั้ง aruco และ turtlebot3
 
 
-        self.x_center = 0.0 # 0.00
+        self.x_center = 0.00 # -0.175
         self.x_tolerance = 0.24
         self.z_center = 0.40
         self.z_tolerance = 0.08
@@ -64,6 +68,11 @@ class ArucoNode(Node):
         self.state = 'IDLE'
         self.align_center_count = 0
         self.waiting_to_rotate = False
+        self.waiting_to_sync = False
+        self.waiting_to_X_align = False
+        self.current_swerve_yaw = 0.0
+        self.current_tb3_yaw = 0.0
+        self.sync_phase = 'X'  
 
         self.last_marker_time = self.get_clock().now()
         self.marker_visible = False
@@ -189,6 +198,16 @@ class ArucoNode(Node):
                     self.get_logger().info("▶️ STATE: ALIGN")
 
             case 'STRAIGHT':
+                POSITION_TOLERANCE = 0.06
+                error_x = x - self.x_center
+
+                if abs(error_x) > POSITION_TOLERANCE:
+                    self.send_stop_command()
+                    self.state = 'SYNC'
+                    self.sync_phase = 'X'
+                    self.get_logger().info("📍 Out of X alignment. ➡️ STATE: SYNC")
+                    return
+
                 if marker_id in [41, 43]:
                     self.send_stop_command()
                     self.state = 'ALIGN'
@@ -244,7 +263,7 @@ class ArucoNode(Node):
             
             case 'ROTATE':
                 MIN_ROTATE_SPEED = 0.9
-                REQUIRED_ALIGNMENT_CYCLES = 20
+                REQUIRED_ALIGNMENT_CYCLES = 40
 
                 if marker_id == 41:
                     self.send_swerve_command("Rotate-Right", 0.0, 0.0, -MIN_ROTATE_SPEED , 1.0)
@@ -260,8 +279,16 @@ class ArucoNode(Node):
                         if self.align_center_count >= REQUIRED_ALIGNMENT_CYCLES:
                             self.send_stop_command_rotate()
                             self.align_center_count = 0
-                            self.state = 'STRAIGHT'
-                            self.get_logger().info("🎯 ID42 aligned. ➡️ STATE: STRAIGHT")
+                            self.waiting_to_sync = True
+
+                            def delayed_callback():
+                                self.sync_phase = 'X'
+                                self.state = 'SYNC'
+                                self.waiting_to_sync = False
+                                self.get_logger().info("🎯 ID42 aligned. ➡️ STATE: SYNC")
+                                timer.cancel()
+
+                            timer = self.create_timer(0.5, delayed_callback)
                     else:
                         # หมุนให้เข้า center
                         if error_x > 0:
@@ -269,7 +296,53 @@ class ArucoNode(Node):
                         else:
                             self.send_swerve_command("Rotate-CCW-ID42", 0.0, 0.0, MIN_ROTATE_SPEED, 1.0)
             
+            case 'SYNC':
+                #ANGLE_TOLERANCE = math.radians(5.0)  # ~5 deg
+                POSITION_TOLERANCE = 0.06
 
+                #if self.sync_phase == 'YAW':
+                #    yaw_error = self.current_swerve_yaw - self.current_tb3_yaw
+                #    if abs(yaw_error) > ANGLE_TOLERANCE:
+                #        direction = -1.0 if yaw_error > 0 else 1.0
+                #        self.send_swerve_command("Yaw-Align", 0.0, 0.0, direction * 0.9, 1.0)
+                #        return
+                #    else:
+                #        self.send_stop_command_rotate()
+                #        self.sync_phase = 'X'
+                #        self.get_logger().info("🎯 Yaw aligned. Proceeding to X-align...")
+                #        return
+
+                if self.sync_phase == 'X':
+                    error_x = x - self.x_center
+                    if abs(error_x) > POSITION_TOLERANCE:
+                        direction = -1.0 if error_x > 0 else 1.0
+                        self.send_swerve_command("X-Align", 0.0, direction * 0.9, 0.0, 1.0)
+                        return
+                    else:
+                        self.send_stop_command()
+                        self.waiting_to_X_align = True
+
+                        def delayed_callback():
+                            self.sync_phase = 'X'
+                            self.state = 'STRAIGHT'
+                            self.waiting_to_X_align = False
+                            self.get_logger().info("✅ SYNC complete. Back to STRAIGHT")
+                            timer.cancel()
+
+                        timer = self.create_timer(0.5, delayed_callback)
+                        
+
+    def swerve_imu_callback(self, msg):
+        q = msg.orientation
+        _, _, yaw = euler_from_quaternion([q.x, q.y, q.z, q.w])
+        self.current_swerve_yaw = yaw
+        #print(f"swerve_imu : {self.current_swerve_yaw} ")
+
+    def tb3_imu_callback(self, msg):
+        q = msg.orientation
+        _, _, yaw = euler_from_quaternion([q.x, q.y, q.z, q.w])
+        self.current_tb3_yaw = yaw
+        #print(f"tb3_imu : {self.current_tb3_yaw } ")
 
     def send_swerve_command(self, label, x, y, wz, scale_speed):
         if label == self.last_cmd[0]:
