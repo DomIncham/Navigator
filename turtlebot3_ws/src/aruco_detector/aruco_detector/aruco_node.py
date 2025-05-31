@@ -24,6 +24,7 @@ from cv_bridge import CvBridge
 from math import hypot
 from sensor_msgs.msg import Imu
 from tf_transformations import euler_from_quaternion
+from rclpy.qos import qos_profile_sensor_data
 
 
 
@@ -40,17 +41,24 @@ class ArucoNode(Node):
         self.pose_pub = self.create_publisher(PoseStamped, '/aruco_marker_pose', 10)
         self.cmd_vel_pub = self.create_publisher(Twist, '/swerve_drive/cmd_vel', 10)
         self.marker_pub = self.create_publisher(Marker, '/aruco_path_marker', 10)
-        self.marker_path_pub = self.create_publisher(Marker, '/aruco_marker_path_marker', 10)
+        #self.marker_path_pub = self.create_publisher(Marker, '/aruco_marker_path_marker', 10)
         self.expected_path_pub = self.create_publisher(Marker, '/expected_path_marker', 10)
         self.tb3_marker_pub = self.create_publisher(Marker, '/turtlebot3_path_marker', 10)
 
+        # ✅ IMU ใช้ sensor_data profile
+        self.create_subscription(Imu, '/swerve_drive/imu', self.swerve_imu_callback, qos_profile=qos_profile_sensor_data)
+        self.create_subscription(Imu, '/imu', self.tb3_imu_callback, qos_profile=qos_profile_sensor_data)
+
+        # ✅ cmd_vel ใช้ sensor_data profile
+        self.create_subscription(Twist, '/cmd_vel', self.cmd_vel_callback, qos_profile=qos_profile_sensor_data)
+
+        # ❌ amcl_pose ไม่ต้องเปลี่ยน
         self.create_subscription(PoseWithCovarianceStamped, '/amcl_pose', self.turtlebot3_pose_callback, 10)
-        self.create_subscription(Imu, '/swerve_drive/imu', self.swerve_imu_callback, 10)
-        self.create_subscription(Imu, '/imu', self.tb3_imu_callback, 10)
 
         self.static_tf_broadcaster = StaticTransformBroadcaster(self)
         self.broadcast_static_camera_tf()
 
+        self.started_logging = False
         self.latest_transformed_aruco_point = None
         self.path_timestamps = []  # สำหรับ timestamp sync ทั้ง aruco และ turtlebot3
 
@@ -67,6 +75,7 @@ class ArucoNode(Node):
         self.last_cmd = ("INIT", 0.0, 0.0, 0.0, 0.0)
         self.state = 'IDLE'
         self.align_center_count = 0
+        #self.x_off_center_count = 0  
         self.waiting_to_rotate = False
         self.waiting_to_sync = False
         self.waiting_to_X_align = False
@@ -163,7 +172,13 @@ class ArucoNode(Node):
         pose.pose.position.x = real_x
         pose.pose.position.y = real_y
         pose.pose.position.z = real_z
-        pose.pose.orientation.w = 1.0
+
+        # ✅ แก้ orientation ให้ arrow หันหน้าตามแกน X
+        quat = tf_transformations.quaternion_from_euler(0.0, math.pi/2, 0.0)
+        pose.pose.orientation.x = quat[0]
+        pose.pose.orientation.y = quat[1]
+        pose.pose.orientation.z = quat[2]
+        pose.pose.orientation.w = quat[3]
 
         self.last_marker_time = self.get_clock().now()
         self.marker_visible = True
@@ -198,16 +213,30 @@ class ArucoNode(Node):
                     self.get_logger().info("▶️ STATE: ALIGN")
 
             case 'STRAIGHT':
-                POSITION_TOLERANCE = 0.06
-                error_x = x - self.x_center
+                #POSITION_TOLERANCE = 0.06
+                #error_x = x - self.x_center
 
-                if abs(error_x) > POSITION_TOLERANCE:
-                    self.send_stop_command()
-                    self.state = 'SYNC'
-                    self.sync_phase = 'X'
-                    self.get_logger().info("📍 Out of X alignment. ➡️ STATE: SYNC")
-                    return
+                # ถ้าเจอ marker ID สำหรับ ALIGN → เข้าสู่ ALIGN ทันที (ป้องกัน SYNC ซ้อน)
+                #if marker_id in [41, 43]:
+                #    self.send_stop_command()
+                #    self.state = 'ALIGN'
+                #    self.get_logger().info("📍 Marker Detected! ➡️ STATE: ALIGN")
+                #    return
 
+                # ถ้า x ยังเบี้ยวอยู่หลาย frame ติดต่อกัน → เข้าสู่ SYNC
+                #if abs(error_x) > POSITION_TOLERANCE:
+                #    self.x_off_center_count += 1
+                #else:
+                #    self.x_off_center_count = 0
+
+                #if self.x_off_center_count >= 30:
+                #    self.send_stop_command()
+                #    self.state = 'SYNC'
+                #    self.sync_phase = 'X'
+                #    self.get_logger().info(f"📍 X Misaligned ({error_x:.2f} m). ➡️ STATE: SYNC")
+                #    return
+
+                # ตรวจระยะหน้า/หลังตามปกติ
                 if marker_id in [41, 43]:
                     self.send_stop_command()
                     self.state = 'ALIGN'
@@ -263,13 +292,13 @@ class ArucoNode(Node):
             
             case 'ROTATE':
                 MIN_ROTATE_SPEED = 0.9
-                REQUIRED_ALIGNMENT_CYCLES = 40
+                REQUIRED_ALIGNMENT_CYCLES = 25
 
                 if marker_id == 41:
                     self.send_swerve_command("Rotate-Right", 0.0, 0.0, -MIN_ROTATE_SPEED , 1.0)
 
                 elif marker_id == 43:
-                    self.send_swerve_command("Rotate-Left", 0.0, 0.0, MIN_ROTATE_SPEED , 1.0)
+                    self.send_swerve_command("Rotate-Left", 0.0, 0.0, MIN_ROTATE_SPEED+0.1 , 1.0)
 
                 elif marker_id == 42:
                     error_x = x - self.x_center
@@ -375,6 +404,13 @@ class ArucoNode(Node):
         else:
             self.marker_lost = False
 
+    def cmd_vel_callback(self, msg: Twist):
+        if not self.started_logging:
+            moving = abs(msg.linear.x) > 0.01 or abs(msg.angular.z) > 0.01
+            if moving:
+                self.started_logging = True
+                self.get_logger().info("🟢 Logging started: TurtleBot3 began moving.")
+
 
     def publish_aruco_path_in_map(self):
         marker = Marker()
@@ -413,10 +449,16 @@ class ArucoNode(Node):
         self.expected_path_pub.publish(marker)
 
     def turtlebot3_pose_callback(self, msg: PoseWithCovarianceStamped):
+        if not self.started_logging:
+            return
+
+        # ✅ เพิ่มตำแหน่งของ TurtleBot3 ลงใน path เสมอ
         p = msg.pose.pose.position
         self.tb3_path_points.append(Point(x=p.x, y=p.y, z=p.z))
 
-        if hasattr(self, "latest_raw_pose"):
+        point_to_append = None
+
+        if self.marker_visible and self.current_marker_id in [41, 42, 43]:
             try:
                 transform = self.tf_buffer.lookup_transform(
                     'map', 'camera_link', rclpy.time.Time(), timeout=Duration(seconds=1.0)
@@ -429,21 +471,23 @@ class ArucoNode(Node):
                 from tf2_geometry_msgs import do_transform_point
                 transformed = do_transform_point(raw_point, transform)
 
-                # ✅ ต่อ path แบบ smooth จาก 42 → 41/43 หรือระหว่าง marker หาย
-                if self.current_marker_id in [41, 42, 43]:
-                    self.last_valid_marker_point = transformed.point
-                    self.marker_path_in_map.append(transformed.point)
-                elif self.last_valid_marker_point is not None:
-                    self.marker_path_in_map.append(self.last_valid_marker_point)
+                point_to_append = transformed.point
+                self.last_valid_marker_point = transformed.point
 
             except Exception as e:
                 self.get_logger().warn(f"[aruco-sync] TF failed: {e}")
 
+        else:
+            # ✅ Marker หาย: ใช้ตำแหน่งของ TurtleBot3 ไปเลยเพื่อความสมจริง
+            point_to_append = Point(x=p.x, y=p.y, z=p.z)
 
+        if point_to_append:
+            self.marker_path_in_map.append(point_to_append)
+
+        # ✅ อัปเดตทั้งสองเส้นใน RViz
         self.publish_tb3_path_marker()
         self.publish_aruco_path_in_map()
         self.path_timestamps.append(self.get_clock().now().nanoseconds)
-
 
     def publish_tb3_path_marker(self):
         marker = Marker()
