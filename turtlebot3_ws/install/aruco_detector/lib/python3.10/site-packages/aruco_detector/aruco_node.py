@@ -83,6 +83,10 @@ class ArucoNode(Node):
         self.current_tb3_yaw = 0.0
         self.sync_phase = 'X'  
 
+        #self.last_tb3_yaw_for_path = None
+        #self.yaw_rotation_threshold = math.radians(5.0)  # ~10 deg
+
+
         self.last_marker_time = self.get_clock().now()
         self.marker_visible = False
         self.marker_lost = False
@@ -250,7 +254,7 @@ class ArucoNode(Node):
 
             case 'ALIGN':
                 error_x = x - self.x_center
-                MIN_LINEAR_SPEED = 0.9
+                MIN_LINEAR_SPEED = 0.8
                 REQUIRED_ALIGNMENT_CYCLES = 25
 
                 if marker_id == 41:
@@ -292,13 +296,13 @@ class ArucoNode(Node):
             
             case 'ROTATE':
                 MIN_ROTATE_SPEED = 0.9
-                REQUIRED_ALIGNMENT_CYCLES = 25
+                REQUIRED_ALIGNMENT_CYCLES = 15
 
                 if marker_id == 41:
-                    self.send_swerve_command("Rotate-Right", 0.0, 0.0, -MIN_ROTATE_SPEED , 1.0)
+                    self.send_swerve_command("Rotate-Right", 0.0, 0.0, -MIN_ROTATE_SPEED+0.1 , 1.0)
 
                 elif marker_id == 43:
-                    self.send_swerve_command("Rotate-Left", 0.0, 0.0, MIN_ROTATE_SPEED+0.1 , 1.0)
+                    self.send_swerve_command("Rotate-Left", 0.0, 0.0, MIN_ROTATE_SPEED , 1.0)
 
                 elif marker_id == 42:
                     error_x = x - self.x_center
@@ -327,7 +331,7 @@ class ArucoNode(Node):
             
             case 'SYNC':
                 #ANGLE_TOLERANCE = math.radians(5.0)  # ~5 deg
-                POSITION_TOLERANCE = 0.06
+                POSITION_TOLERANCE = 0.12
 
                 #if self.sync_phase == 'YAW':
                 #    yaw_error = self.current_swerve_yaw - self.current_tb3_yaw
@@ -348,7 +352,7 @@ class ArucoNode(Node):
                         self.send_swerve_command("X-Align", 0.0, direction * 0.9, 0.0, 1.0)
                         return
                     else:
-                        self.send_stop_command()
+                        self.send_stop_command_rotate()
                         self.waiting_to_X_align = True
 
                         def delayed_callback():
@@ -369,6 +373,7 @@ class ArucoNode(Node):
 
     def tb3_imu_callback(self, msg):
         q = msg.orientation
+        self.last_tb3_angular_velocity = msg.angular_velocity.z
         _, _, yaw = euler_from_quaternion([q.x, q.y, q.z, q.w])
         self.current_tb3_yaw = yaw
         #print(f"tb3_imu : {self.current_tb3_yaw } ")
@@ -452,12 +457,17 @@ class ArucoNode(Node):
         if not self.started_logging:
             return
 
-        # ✅ เพิ่มตำแหน่งของ TurtleBot3 ลงใน path เสมอ
+        # ✅ เก็บตำแหน่งของ TurtleBot3 เสมอ
         p = msg.pose.pose.position
         self.tb3_path_points.append(Point(x=p.x, y=p.y, z=p.z))
+        self.path_timestamps.append(self.get_clock().now().nanoseconds)  # ⬅️ moved up
 
-        point_to_append = None
+        # ✅ ถ้า TurtleBot3 กำลังหมุน → ข้ามการเก็บ ArUco path แต่ไม่ข้าม timestamp
+        if abs(self.last_tb3_angular_velocity) > 0.29:
+            self.get_logger().info(f"⏸ Skip ArUco path: angular vel = {self.last_tb3_angular_velocity:.3f} rad/s")
+            return
 
+        # ✅ ถ้าเห็น marker ที่ต้องการ → เก็บ ArUco Path
         if self.marker_visible and self.current_marker_id in [41, 42, 43]:
             try:
                 transform = self.tf_buffer.lookup_transform(
@@ -468,26 +478,18 @@ class ArucoNode(Node):
                 raw_point.header = self.latest_raw_pose.header
                 raw_point.point = self.latest_raw_pose.pose.position
 
-                from tf2_geometry_msgs import do_transform_point
                 transformed = do_transform_point(raw_point, transform)
 
-                point_to_append = transformed.point
+                self.marker_path_in_map.append(transformed.point)
                 self.last_valid_marker_point = transformed.point
 
             except Exception as e:
                 self.get_logger().warn(f"[aruco-sync] TF failed: {e}")
 
-        else:
-            # ✅ Marker หาย: ใช้ตำแหน่งของ TurtleBot3 ไปเลยเพื่อความสมจริง
-            point_to_append = Point(x=p.x, y=p.y, z=p.z)
-
-        if point_to_append:
-            self.marker_path_in_map.append(point_to_append)
-
-        # ✅ อัปเดตทั้งสองเส้นใน RViz
+        # ✅ อัปเดตเส้นทางใน RViz
         self.publish_tb3_path_marker()
         self.publish_aruco_path_in_map()
-        self.path_timestamps.append(self.get_clock().now().nanoseconds)
+
 
     def publish_tb3_path_marker(self):
         marker = Marker()
@@ -508,7 +510,8 @@ class ArucoNode(Node):
     def export_all_paths_to_csv(self, filename: str):
         os.makedirs(os.path.dirname(filename), exist_ok=True)
 
-        len_sync = min(len(self.marker_path_in_map), len(self.tb3_path_points), len(self.path_timestamps))
+        len_tb3 = len(self.tb3_path_points)
+        last_valid_swerve = None  # ✅ เก็บค่า ArUco ล่าสุด
 
         def closest_expected(p):
             return min(self.expected_path_points, key=lambda ep: hypot(ep.x - p.x, ep.y - p.y))
@@ -522,23 +525,27 @@ class ArucoNode(Node):
                 'turtlebot3_x', 'turtlebot3_y', 'turtlebot3_z'
             ])
 
-            for i in range(len_sync):
-                t_ns = self.path_timestamps[i]
+            for i in range(len_tb3):
+                # 🕒 เวลา
+                t_ns = self.path_timestamps[i] if i < len(self.path_timestamps) else 0
                 t_s = t_ns / 1e9
                 t_dt = datetime.fromtimestamp(t_s).strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
-
                 row = [t_ns, f"{t_s:.6f}", t_dt]
 
-                # ✅ ใช้ตำแหน่งของ TurtleBot3 ในการหาจุด expected ที่ใกล้ที่สุด
+                # 🎯 expected
                 p_tb3 = self.tb3_path_points[i]
                 p_expected = closest_expected(p_tb3)
                 row.extend([p_expected.x, p_expected.y, p_expected.z])
 
-                # ✅ Swerve Robot Path
-                p_swerve = self.marker_path_in_map[i]
-                row.extend([p_swerve.x, p_swerve.y, p_swerve.z])
+                # 🔁 ArUco (ใช้ค่าใหม่หรือล่าสุด)
+                if i < len(self.marker_path_in_map):
+                    last_valid_swerve = self.marker_path_in_map[i]
+                if last_valid_swerve:
+                    row.extend([last_valid_swerve.x, last_valid_swerve.y, last_valid_swerve.z])
+                else:
+                    row.extend(["", "", ""])  # หากยังไม่เคยมี ArUco เลย
 
-                # ✅ TurtleBot3 Path
+                # 🐢 TurtleBot3
                 row.extend([p_tb3.x, p_tb3.y, p_tb3.z])
 
                 writer.writerow(row)

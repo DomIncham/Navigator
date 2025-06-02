@@ -1,0 +1,24 @@
+[0.029s] Invoking command in '/workspaces/ros2-workspace/turtlebot3_ws/build/my_robot_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example:/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector:/opt/ros/humble /usr/bin/cmake --build /workspaces/ros2-workspace/turtlebot3_ws/build/my_robot_localization -- -j4 -l4
+[0.171s] Invoked command in '/workspaces/ros2-workspace/turtlebot3_ws/build/my_robot_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example:/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector:/opt/ros/humble /usr/bin/cmake --build /workspaces/ros2-workspace/turtlebot3_ws/build/my_robot_localization -- -j4 -l4
+[0.180s] Invoking command in '/workspaces/ros2-workspace/turtlebot3_ws/build/my_robot_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example:/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector:/opt/ros/humble /usr/bin/cmake --install /workspaces/ros2-workspace/turtlebot3_ws/build/my_robot_localization
+[0.187s] -- Install configuration: ""
+[0.189s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/config
+[0.189s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/config/ekf.yaml
+[0.190s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/launch
+[0.190s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/launch/ekf_localization.launch.py
+[0.190s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/ament_index/resource_index/package_run_dependencies/my_robot_localization
+[0.190s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/ament_index/resource_index/parent_prefix_path/my_robot_localization
+[0.190s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/environment/ament_prefix_path.sh
+[0.190s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/environment/ament_prefix_path.dsv
+[0.190s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/environment/path.sh
+[0.192s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/environment/path.dsv
+[0.192s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/local_setup.bash
+[0.192s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/local_setup.sh
+[0.192s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/local_setup.zsh
+[0.192s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/local_setup.dsv
+[0.192s] -- Installing: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/package.dsv
+[0.192s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/ament_index/resource_index/packages/my_robot_localization
+[0.192s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/cmake/my_robot_localizationConfig.cmake
+[0.200s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/cmake/my_robot_localizationConfig-version.cmake
+[0.200s] -- Up-to-date: /workspaces/ros2-workspace/turtlebot3_ws/install/my_robot_localization/share/my_robot_localization/package.xml
+[0.217s] Invoked command in '/workspaces/ros2-workspace/turtlebot3_ws/build/my_robot_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_teleop:/workspaces/ros2-workspace/turtlebot3_ws/install/turtlebot3_example:/workspaces/ros2-workspace/turtlebot3_ws/install/aruco_detector:/opt/ros/humble /usr/bin/cmake --install /workspaces/ros2-workspace/turtlebot3_ws/build/my_robot_localization
